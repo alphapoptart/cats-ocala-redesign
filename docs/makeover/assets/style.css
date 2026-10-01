@@ -8,3 +8,5 @@
 .prose,.intro-text,.schedule-layout>div,.contact-layout>div{min-width:0;overflow-wrap:anywhere}.brand img{mix-blend-mode:multiply}
 @media(max-width:420px){.schedule-block table{font-size:15px}.meeting-schedules table th:first-child{width:30%}.meeting-schedules table th:nth-child(2){width:32%}}
 @media(max-width:560px){.schedule-block table{display:block;font-size:16px}.schedule-block thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.schedule-block tbody{display:block}.schedule-block tbody tr{display:grid;grid-template-columns:1fr 1fr;gap:4px 15px;padding:15px 10px;border-bottom:1px solid var(--line)}.schedule-block tbody tr>*{border:0;padding:0}.schedule-block tbody th{grid-column:1/-1;font-size:14px;margin-bottom:4px;overflow-wrap:normal}.route-services .schedule-block td{grid-column:1/-1}.schedule-block tbody tr:last-child{border:0}}
+/* Keep all text, including enlarged headings, inside the reading column. */
+body{overflow-wrap:anywhere}.hero-grid>*,.wayfinding>*,.place-grid>*,.info-grid>*,.closing-grid>*{min-width:0}.button{max-width:100%}
