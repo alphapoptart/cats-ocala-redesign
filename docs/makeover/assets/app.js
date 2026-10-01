@@ -13,12 +13,17 @@ function setCats(visible) {
  perches.forEach(perch => { perch.hidden = !visible; });
  cats.setAttribute('aria-pressed', String(visible));
  cats.setAttribute('aria-label', visible ? 'Hide decorative cats' : 'Show decorative cats');
- cats.title = visible ? 'Hide decorative cats' : 'Show decorative cats';
- cats.querySelector('.cat-label').textContent = visible ? 'Hide cats' : 'Show cats';
 }
 cats.addEventListener('click', () => setCats(cats.getAttribute('aria-pressed') !== 'true'));
 document.addEventListener('keydown', event => {
  if (event.key !== 'Escape') return;
  if (navigation.classList.contains('open')) { closeMenu(); menu.focus(); }
  setCats(false);
+});
+
+document.addEventListener('click', event => {
+ if (navigation.classList.contains('open') && !event.target.closest('.navrow')) closeMenu();
+});
+window.addEventListener('resize', () => {
+ if (window.innerWidth > 700 && navigation.classList.contains('open')) closeMenu();
 });
