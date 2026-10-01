@@ -32,3 +32,12 @@
 
 /* Keep About section headings comfortably below the viewport edge. */
 .route-about .prose>section[id]{scroll-margin-block-start:3rem}
+
+/* About section navigation: one calm, readable group on small screens. */
+@media(max-width:700px){
+ .route-about .editorial aside nav{display:grid;grid-template-columns:1fr;gap:0;margin-bottom:0;background:#fffaf1;border:1px solid #c4d3cb;border-top:3px solid #b16848;padding:5px 16px;box-shadow:0 5px 0 #ebe3d5}
+ .route-about .editorial aside nav a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:12px 2px;color:#233c48;font-size:17px;font-weight:700;line-height:1.4;text-decoration:none;border-bottom:1px solid #dce4dd}
+ .route-about .editorial aside nav a:last-child{border-bottom:0}
+ .route-about .editorial aside nav a::after{content:'';flex:none;width:6px;height:6px;border-right:2px solid #176e76;border-bottom:2px solid #176e76;transform:rotate(45deg);margin-right:4px;margin-top:-4px}
+ .route-about .editorial aside nav a:hover{color:#176e76;background:#edf1e9}
+}
