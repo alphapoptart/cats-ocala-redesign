@@ -4,7 +4,7 @@ This six-page static design is isolated at `docs/makeover/`. The original cleanu
 
 Run from this folder with `python3 -m http.server 8080`, then open http://localhost:8080. No framework, package installation, backend, analytics or health-data form is required. All internal paths are relative, supporting both the nested Pages path and a future custom-domain root.
 
-The design uses the authentic CATS logo and teal identity, direct service and contact information, compact sans-serif typography, and an asymmetric home layout. The homepage features the verified founder portrait as a small supporting image. The house photograph appears only secondarily on About and Contact. There is no synthetic patient photography or decorative hero illustration.
+The design uses the authentic CATS logo and teal identity with ink blue, warm terracotta and textured cut-paper color. A locally authored botanical collage supplies original decorative artwork; it does not depict patients, a facility, or a promised outcome. The home composition combines an illustrated opening, practical contact ribbon, staggered counseling/meeting sections and a founder feature with the verified Sally portrait. The house photograph appears only secondarily on About and Contact. No synthetic patient photography is used.
 
 Content was checked against all six pages at https://catsofocala.com/ on October 1, 2026, and the approved cleanup source at commit ed002fee0aa569c6d83196546efcd26e26febcfb. Published counseling and community meeting times are retained. The privacy policy keeps its original legal meaning and the repaired NAI, NIDA/NIH and SAMHSA links.
 
