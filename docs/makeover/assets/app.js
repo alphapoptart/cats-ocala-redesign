@@ -1,23 +1,24 @@
 document.documentElement.classList.add('js');
 const menu = document.querySelector('#menu');
 const navigation = document.querySelector('#navigation');
+const cats = document.querySelector('#cats');
+const perches = document.querySelectorAll('.cat-perch');
 function closeMenu() { navigation.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }
 menu.addEventListener('click', () => {
  const expanded = menu.getAttribute('aria-expanded') === 'true';
  navigation.classList.toggle('open', !expanded);
  menu.setAttribute('aria-expanded', String(!expanded));
 });
-const cats = document.querySelector('#cats');
-const company = document.querySelector('#cat-place');
-function hideCat() { company.hidden = true; cats.setAttribute('aria-pressed', 'false'); cats.setAttribute('aria-label', 'Add a little cat company'); cats.title = 'Add a little cat company'; }
-cats.addEventListener('click', () => {
- if (!company.hidden) { hideCat(); return; }
- company.hidden = false;
- cats.setAttribute('aria-pressed', 'true');
- cats.setAttribute('aria-label', 'Hide the cats'); cats.title = 'Hide the cats';
-});
-document.addEventListener('keydown', (event) => {
+function setCats(visible) {
+ perches.forEach(perch => { perch.hidden = !visible; });
+ cats.setAttribute('aria-pressed', String(visible));
+ cats.setAttribute('aria-label', visible ? 'Hide decorative cats' : 'Show decorative cats');
+ cats.title = visible ? 'Hide decorative cats' : 'Show decorative cats';
+ cats.querySelector('.cat-label').textContent = visible ? 'Hide cats' : 'Show cats';
+}
+cats.addEventListener('click', () => setCats(cats.getAttribute('aria-pressed') !== 'true'));
+document.addEventListener('keydown', event => {
  if (event.key !== 'Escape') return;
  if (navigation.classList.contains('open')) { closeMenu(); menu.focus(); }
- hideCat();
+ setCats(false);
 });
