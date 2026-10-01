@@ -29,3 +29,6 @@
  .navrow nav a[aria-current]{background:#e0e9e1;border-bottom:1px solid #dce4dd;border-left:3px solid var(--teal);padding-left:8px}
  .navrow nav a:hover{background:#edf1e9}
 }
+
+/* Keep About section headings comfortably below the viewport edge. */
+.route-about .prose>section[id]{scroll-margin-block-start:3rem}
