@@ -1,14 +1,14 @@
 # CATS of Ocala website concept
 
-Editable static website with six routes: Home, About, Services, Meetings, Contact and Privacy Policy. No framework or build step; production source is the HTML, CSS, JavaScript and local assets in `site/`.
+Editable static website with six routes: Home, About, Services, Meetings, Contact and Privacy Policy. No framework or build step; production source is the HTML, CSS, JavaScript and local assets in `docs/`.
 
 ## Run locally
 
-From this directory: `python3 -m http.server 8080 --directory site`, then open http://localhost:8080. This local server is accessible on the computer where it runs; it is not a hosted sharing link. Any static host supporting directory index routes can serve `site/`.
+From this directory: `python3 -m http.server 8080 --directory docs`, then open http://localhost:8080. This local server is accessible on the computer where it runs; it is not a hosted sharing link. Any static host supporting directory index routes can serve `docs/`.
 
 ## Edit
 
-Edit each page’s `index.html`, shared `site/assets/style.css`, and `site/assets/app.js`. Navigation and footer are included in each page, so update all six when changing shared markup. Images and subset Lato fonts are local. No package installation is needed.
+Edit each page’s `index.html`, shared `docs/assets/style.css`, and `docs/assets/app.js`. Navigation and footer are included in each page, so update all six when changing shared markup. Images and subset Lato fonts are local. No package installation is needed.
 
 ## Features
 
@@ -20,6 +20,10 @@ Official CATS assets originate from https://catsofocala.com/: `/wp-content/uploa
 
 Lato by Łukasz Dziedzic is included under the SIL Open Font License; see `licenses/Lato-OFL.txt`. The superseded Font Awesome cat asset and its attribution/license are retained for rollback; see `licenses/Font-Awesome.txt` (icons CC BY4.0). Current decorative cats use reference-based local WebP art.
 
-## Publication
+## GitHub Pages and publication
 
-This source export does not replace the live CATS website or change hosting access. Repository privacy and website audience are separate. A private repository URL is a source-code link; it is not a live website preview. No external users are invited by this export.
+This repository is public by the owner's approval. GitHub Pages publishes the `docs/` folder of `main`; `.nojekyll` serves the plain static files without Jekyll. Commit changes to `docs/` to update the preview. The GitHub-generated Pages build must finish before changes appear.
+
+All page, stylesheet, and image paths are relative, including dynamically added cat images, so the site supports the GitHub project subpath as well as a custom-domain root without source-path rewrites. It has no ChatGPT runtime, hosted API, account login, or framework dependency. Deploy the contents of `docs/` to any ordinary static host supporting directory index pages.
+
+This preview does not replace the live CATS website. No custom domain or DNS changes have been made. Domain migration should happen only after the organization approves the final content and hosting setup.
