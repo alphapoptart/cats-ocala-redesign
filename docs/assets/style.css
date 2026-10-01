@@ -27,4 +27,4 @@ footer>.cat-company,.intro>.cat-company,.cards>.cat-company{grid-column:1/-1}
 
 footer:has(>.cat-company){flex-wrap:wrap}footer>.cat-company{flex-basis:100%}
 
-.cat-toggle{width:112px;height:82px;padding:6px 10px;position:relative;overflow:visible}.cat-button-art{position:relative;display:block;width:90px;height:66px}.cat-button-cat{position:absolute;right:0;top:0;width:36px;height:45px;object-fit:contain;transform:scaleX(-1)}.cat-button-logo{position:absolute;left:0;bottom:0;width:68px;height:48px;object-fit:contain}.cat-toggle[aria-pressed=true]{background:#e7f7f9;border-color:#087e8b}
+.cat-toggle{width:76px;height:56px;padding:5px 7px;position:relative;overflow:visible}.cat-button-art{position:relative;display:block;width:60px;height:44px}.cat-button-cat{position:absolute;right:0;top:0;width:24px;height:30px;object-fit:contain;transform:scaleX(-1)}.cat-button-logo{position:absolute;left:0;bottom:0;width:46px;height:33px;object-fit:contain}.cat-toggle[aria-pressed=true]{background:#e7f7f9;border-color:#087e8b}
